@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안내사항 및 이용 조건</title>
+    <style>
+        /* CSS 스타일 시작 */
+        :root {
+            --primary-color: #3498db;
+            --text-dark: #2c3e50;
+            --text-gray: #555;
+            --bg-light: #f8f9fa;
+            --danger: #e74c3c;
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #f0f2f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .policy-section {
+            margin-bottom: 30px;
+        }
+
+        .policy-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+        }
+
+        .policy-section h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background-color: var(--primary-color);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+
+        .policy-content {
+            padding-left: 14px;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .prohibit-box {
+            background-color: #fff5f5;
+            border-left: 4px solid var(--danger);
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .prohibit-box strong {
+            color: var(--danger);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 5px;
+        }
+
+        ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #ccc;
+        }
+
+        .footer-note {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        .btn-print {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: var(--text-dark);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn-print:hover {
+            opacity: 0.8;
+        }
+
+        @media print {
+            .btn-print { display: none; }
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; }
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px; margin: 10px; }
+            header h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📌 안내사항 및 이용 조건</h1>
+        </header>
+
+        <main>
+            <section class="policy-section">
+                <h2>저작권 및 소유권</h2>
+                <div class="policy-content">
+                    본 상품을 통해 제작된 모든 결과물(디자인, 코드, 구조 등)에 대한 저작권은 <strong>"대충닉넴임"</strong>에게 귀속됩니다.<br>
+                    단, 구매자는 결과물을 본인의 서비스/페이지 내에서 사용하는 것에 한하여 이용 권한을 가집니다.
+                </div>
+            </section>
+
+            <section class="policy-section">
+                <h2>사용 범위 및 금지사항</h2>
+                <div class="policy-content">
+                    구매자는 제공받은 작업물을 본인 사이트 내에서 자유롭게 수정 및 사용할 수 있습니다.
+                    <div class="prohibit-box">
+                        <strong>⚠️ 아래 행위는 엄격히 금지됩니다:</strong>
+                        <ul>
+                            <li>제3자에게 양도, 판매, 재배포, 공유하는 행위</li>
+                            <li>작업물을 기반으로 한 2차 상품 제작 및 상업적 재판매</li>
+                        </ul>
+                        <small>* 위반 시 서비스 이용 제한 및 법적 책임이 발생할 수 있습니다.</small>
+                    </div>
+                </div>
+            </section>
+
+            <section class="policy-section">
+                <h2>포트폴리오 활용</h2>
+                <div class="policy-content">
+                    제작된 작업물은 <strong>"대충닉넴임"</strong>의 포트폴리오, 홍보, SNS 및 기타 채널에 활용될 수 있습니다.
+                </div>
+            </section>
+
+            <section class="policy-section">
+                <h2>외부 자료 및 코드 책임 제한</h2>
+                <div class="policy-content">
+                    클라이언트가 제공한 이미지, 텍스트, 코드 등 외부 자료에 대해 발생하는 저작권 문제, 라이선스 위반, 기타 법적 분쟁에 대해서 "대충닉넴임"은 책임을 지지 않습니다.
+                </div>
+            </section>
+
+            <section class="policy-section">
+                <h2>기존 코드 및 타 작업물 관련 면책</h2>
+                <div class="policy-content">
+                    클라이언트가 전달한 기존 코드 또는 타 작업자의 작업물이 포함된 경우, 해당 부분에서 발생하는 오류, 충돌, 권리 문제 등에 대해서는 책임지지 않습니다.
+                </div>
+            </section>
+
+            <section class="policy-section">
+                <h2>작업 범위 및 수정</h2>
+                <div class="policy-content">
+                    <ul>
+                        <li>작업 범위는 사전에 협의된 내용에 한정되며, 추가 요청은 별도의 비용이 발생할 수 있습니다.</li>
+                        <li>기본 수정은 협의된 횟수 내에서 가능하며, 범위를 초과하는 수정은 추가 비용이 부과됩니다.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="policy-section">
+                <h2>환불 및 취소</h2>
+                <div class="policy-content">
+                    디지털 콘텐츠 특성상 <strong>작업이 시작된 이후에는 단순 변심에 의한 환불이 어렵습니다.</strong><br>
+                    단, 작업 시작 전에는 전액 환불이 가능합니다.
+                </div>
+            </section>
+
+            <section class="policy-section">
+                <h2>책임 범위</h2>
+                <div class="policy-content">
+                    결과물 사용으로 인해 발생하는 직접적/간접적 손해에 대해 "대충닉넴임"은 고의 또는 중대한 과실이 없는 한 책임을 지지 않습니다.
+                </div>
+            </section>
+        </main>
+
+        <button class="btn-print" onclick="window.print()">이용약관 인쇄/PDF 저장</button>
+
+        <footer class="footer-note">
+            &copy; <span id="year"></span> 대충닉넴임. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        // 현재 연도 자동 표시
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 마우스 우클릭 방지 (선택 사항)
+        // document.addEventListener('contextmenu', function(e) {
+        //     e.preventDefault();
+        // });
+    </script>
+</body>
+</html>
