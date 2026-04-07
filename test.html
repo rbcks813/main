@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background-color: #f9f9f9; }
+        section { height: 800px; border-bottom: 1px dashed #ccc; padding: 20px; }
+        h2 { color: #333; background: #eee; padding: 10px; }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>제작 방식 가이드</h2>
+        <p>여기는 제작 방식 가이드 내용입니다. (스크롤 테스트를 위해 길게 설정됨)</p>
+    </section>
+    <section>
+        <h2>서비스 특장점</h2>
+        <p>여기는 서비스 특장점 내용입니다.</p>
+    </section>
+    <section>
+        <h2>작업 프로세스</h2>
+        <p>여기는 작업 프로세스 내용입니다.</p>
+    </section>
+    <section>
+        <h2>포트폴리오</h2>
+        <p>여기는 포트폴리오 내용입니다.</p>
+    </section>
+
+    <script>
+        // 부모로부터 메시지를 받았을 때 실행
+        window.addEventListener('message', function(e) {
+            if (e.data.type === 'requestScroll') {
+                const targetKey = e.data.target;
+                const sections = document.querySelectorAll("h2");
+                let targetEl = null;
+
+                sections.forEach(h => {
+                    if (h.innerText.includes(targetKey)) targetEl = h;
+                });
+
+                if (targetEl) {
+                    // 해당 요소의 위치를 계산해서 부모에게 다시 보냄
+                    const rect = targetEl.getBoundingClientRect();
+                    window.parent.postMessage({
+                        type: 'doScroll',
+                        offsetTop: rect.top + window.pageYOffset
+                    }, '*');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
